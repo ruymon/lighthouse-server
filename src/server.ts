@@ -1,13 +1,16 @@
+import cors from 'cors';
 import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
-import { auth } from './middlewares/authenticationMiddleware';
+import { authenticationMiddleware } from './middlewares/authenticationMiddleware';
 
 const app = express();
 
 dotenv.config();
 
 app.use(express.json());
-app.use(auth);
+app.use(cors());
+
+app.use(authenticationMiddleware);
 
 app.get('/me', async (req: Request, res: Response) => {
     res.json(req.user);

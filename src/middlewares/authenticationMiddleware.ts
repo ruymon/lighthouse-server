@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { LayersService } from "../services/layers";
 
-export const auth = async (req: Request, res: Response, next: NextFunction) => {
+export const authenticationMiddleware = async (req: Request, res: Response, next: NextFunction) => {
   const { communityId, userId, session } = req.query as any;
   
   const layersService = new LayersService(communityId);

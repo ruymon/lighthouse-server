@@ -28,7 +28,7 @@ export class LayersService {
    * @param session - User's session given by Layers
   **/
   public validateUser = async (userId: string, community: string, session: string): Promise<void> => {
-    await this.axiosInstance.get(`/sso/token/validate`, {
+    await this.axiosInstance.get(`/sso/session/validate`, {
       params: {
         userId,
         community,
