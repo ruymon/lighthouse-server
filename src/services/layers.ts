@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from "axios";
-import { User } from "../entities/User";
+import { LayersUser } from "entities/LayersUser";
 
 export class LayersService {
   private axiosInstance: AxiosInstance;
@@ -18,7 +18,7 @@ export class LayersService {
    * Get user information by id
    * @param userId - User's id
   **/
-  public getUserById = async (userId: string): Promise<User | undefined> => {
+  public getUserById = async (userId: string): Promise<LayersUser | undefined> => {
     const response = await this.axiosInstance.get(`users/${userId}`);
     return response.data;
   };
