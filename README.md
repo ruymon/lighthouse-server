@@ -65,6 +65,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 This project was only possible thanks to the following people, for their help and support! Feel free to check their profiles and give them a follow:
 
 - [Layers Education](https://layers.education/)
+- [Luiz Gotardo](https://github.com/DoginUwU)
 - [Lucas Gripa](https://github.com/lucas-grippa)
 - [Carlos Rafael](https://github.com/CarlosZoft)
-- [Luiz Gotardo](https://github.com/DoginUwU)
