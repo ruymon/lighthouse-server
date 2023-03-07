@@ -1,9 +1,11 @@
-import { LayersUser } from "entities/LayersUser";
+import { LayersUser } from "../entities/LayersUser";
+import { User } from "../entities/User";
 
 declare global {
   namespace Express {
     export interface Request {
-      user: LayersUser
+      layersUser: LayersUser,
+      user: User
     }
   }
 }

@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { UserRepository } from "./../repositories/UserRepository";
 
 export const syncUserMiddleware = async (req: Request, res: Response, next: NextFunction) => {
-  const user = req.user;
+  const user = req.layersUser;
   
   const userRepository = new UserRepository();
   const userExists = await userRepository.getUserById(user.id);

@@ -27,7 +27,7 @@ export const authenticationMiddleware = async (req: Request, res: Response, next
   user.id = user._id as any;
   delete user._id;
   
-  req.user = user;
+  req.layersUser = user;
 
   return next();
 };
