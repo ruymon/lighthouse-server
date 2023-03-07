@@ -1,5 +1,6 @@
 export interface LayersUser {
   id: string;
+  _id?: string;
   createdAt: Date;
   updatedAt: Date;
   active: boolean;

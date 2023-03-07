@@ -1,9 +1,12 @@
-import { User } from "entities/User";
-import { IUserRepository } from "interfaces/IUserRepository";
-import { prisma } from "prisma";
+import { prisma } from "../config/prisma";
+import { User } from "../entities/User";
+import { IUserRepository } from "../interfaces/IUserRepository";
+
 
 export class UserRepository implements IUserRepository {
   async getUserById(userId: string): Promise<User | null> {
+    console.log('getUserById', userId);
+
     return await prisma.user.findUnique({
       where: {
         id: userId,

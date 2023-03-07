@@ -23,6 +23,10 @@ export const authenticationMiddleware = async (req: Request, res: Response, next
     return res.status(401).json({ message: 'Unauthorized: No user' });
   }
 
+  // rename user._id to user.id for consistency
+  user.id = user._id as any;
+  delete user._id;
+  
   req.user = user;
 
   return next();
