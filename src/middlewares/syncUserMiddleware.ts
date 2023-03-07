@@ -19,6 +19,8 @@ export const syncUserMiddleware = async (req: Request, res: Response, next: Next
   } else {
     await userRepository.updateUser(userObject);
   }
-  
+
+  req.user = userObject;
+    
   return next();
 };
