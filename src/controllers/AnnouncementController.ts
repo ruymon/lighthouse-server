@@ -37,8 +37,8 @@ export class AnnouncementController {
 
   async delete (req: Request, res: Response) {
     try {
-      const announcement = await announcementRepository.deleteAnnouncement(req.params.id);
-      res.status(204).json(announcement);
+      await announcementRepository.deleteAnnouncement(req.params.id);
+      res.status(204).send();
     }
     catch (error) {
       res.status(500).json(error);

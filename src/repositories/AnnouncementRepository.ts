@@ -34,8 +34,8 @@ export class AnnouncementRepository implements IAnnouncementRepository {
     });
   }
   
-  async deleteAnnouncement(announcementId: string): Promise<Announcement> {
-    return await prisma.announcement.delete({
+  async deleteAnnouncement(announcementId: string): Promise<void> {
+    await prisma.announcement.delete({
       where: {
         id: announcementId,
       },
